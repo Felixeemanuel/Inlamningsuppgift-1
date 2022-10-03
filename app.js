@@ -1,0 +1,1 @@
+let grupparbete = 'Tunga är vi';
