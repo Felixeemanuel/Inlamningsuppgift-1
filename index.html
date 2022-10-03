@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Bajs</title>
+    <title>Gissa numret</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Gissa på ett nummer mellan 1 och 100</h1><br>
+        <div class="form">
+            <label for="Skriv in ditt nummer i rutan"></label>
+            <input type="number" id="insertNumber">
+            <input type="button" id="submit" onclick="submitAnswer()" value="Enter"><br>
+            <input type="button" onclick="playAgain()" value="Spela om">
 
-    <p>hej</p>
-    
- 
+            <p class="message">Du har gissat:  </p>
 
-    <h1>Hej</h1>
+
+        </div>
+    </div>
 
 
     <script src="app.js"></script>
