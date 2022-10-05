@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt</title>
+    <link rel="stylesheet" href="style2.css">
+    <title>Gissa numret</title>
 </head>
 <body>
-    <h1>Gissningsspel!</h1> 
-    <br>
-    <p>Gissa ett tal mellan 1-100 och se hur många gissningar du behöver.</p>
-
-    <button onclick="question()">Starta Spelet!</button>
-    <script src="app.js"></script>
+    <div class="container">
+        <h1>Gissa på ett nummer mellan 1 och 100</h1>
+        
+        <!-- <label for="Skriv in ditt nummer i rutan"></label> -->
+        <div class="form">
+            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här...">
+            <input type="button" id="enter" class="btn enter" onclick="submitAnswer()" value="Enter">
+        </div>
+        
+        <input type="button" id="again" class="btn again" onclick="playAgain()" value="Spela om">
+        
+        <p class="message">Du har gissat: </p>
+        
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
