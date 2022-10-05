@@ -62,10 +62,10 @@ h1{
     top: 2rem;
     right: 2rem;
 }
-.again{
-    position: absolute;
-    top: 2rem;
-    left: 5rem";
+.restart{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    
 }
 .guess{
     background: none;
@@ -84,14 +84,12 @@ h1{
     background: #eee;
     color: #222;
     font-family: inherit;
+    font-weight: bold;
     padding: 2rem 3rem;
     cursor: pointer;
 }
 .btn:hover{
     background: #ccc;
-}
-.again{
-    margin-left: 2rem;
 }
 .message{
     margin-top: 2rem;

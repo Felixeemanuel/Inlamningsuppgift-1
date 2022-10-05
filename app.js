@@ -1,16 +1,16 @@
 'use strict'; // Är global och hindrar dig från att använda odeklarerade variabler
-let secretNumber = Math.trunc(Math.random() * 100) + 1; // Skapar ett tal mellan 1 till 100
+let secretNumber = 5;//Math.trunc(Math.random() * 100) + 1; // Skapar ett tal mellan 1 till 100
 
 let tries = 0;
-let triesLeft = 20;
+let triesLeft = 10;
 
 const displayMessage = (message) => {
     document.querySelector('.message').textContent = message;
 }
 
-document.querySelector('.check').addEventListener('click', () => {
+document.querySelector('.submit').addEventListener('click', () => {
     const guess= Number(document.querySelector('.guess').value);
-    console.log(guess, typeof guess);
+    // console.log(guess, typeof guess);
     if(!guess) { 
         displayMessage('No Number');
 
@@ -18,9 +18,11 @@ document.querySelector('.check').addEventListener('click', () => {
 
         displayMessage('Correct Number!');
         document.querySelector('.number').textContent = secretNumber;
-        //! Även om jag har vunnit så kan jag fortfarande gissa tills jag förlorar
+
         document.querySelector('body').style.backgroundColor = '#64b347';
         document.querySelector('.number').style.width = '15rem';
+
+        // document.querySelector('.submit').removeEventListener('click');
         
     } else if(guess !== secretNumber) { // Om det gissade numret inte är rätt
 
@@ -32,18 +34,20 @@ document.querySelector('.check').addEventListener('click', () => {
             document.querySelector('.triesLeft').textContent = triesLeft;
         }else {
             displayMessage('You Lost The Game !'); // Om du använder upp alla försök så blir det förlust
-            document.querySelector('.tries').textContent = 20;
+            document.querySelector('.tries').textContent = 10;
             document.querySelector('.triesLeft').textContent = 0;
-            //! Även om jag har förlorat så kan jag fortsätta gissa tills jag vinner
+
             document.querySelector('body').style.backgroundColor = '#b31b1b';
+
+            //document.querySelector('.submit').removeEventListener('click');
         }
     }
 });
 // Again knappen för att starta om spelet
-document.querySelector('.again').addEventListener('click', () => {
+document.querySelector('.restart').addEventListener('click', () => {
     tries = 0;
-    triesLeft = 20;
-    secretNumber = Math.trunc(Math.random() * 100) + 1;
+    triesLeft = 10;
+    secretNumber = 5;//Math.trunc(Math.random() * 100) + 1;
     displayMessage('Start Guessing...');
     document.querySelector('.triesLeft').textContent = triesLeft;
     document.querySelector('.number').textContent = '?';
