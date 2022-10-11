@@ -35,7 +35,7 @@ function question()  {
         //Om svaret är för lågt
     else if (input < random) {
         console.log('Du gissade för lågt! Antal gissningar: ' + count); 
-        correctAnswer.style.color = '#05ff16'
+        correctAnswer.style.color = '#0011ff'
         correctAnswer.innerHTML = ('Du gissade för lågt! Gissa igen.') 
         meddela.style.color = '#0011ff'
         meddela.innerHTML = count                                                 //laddar funktionen igen eftersom svaret var fel.   
