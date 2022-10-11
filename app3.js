@@ -6,6 +6,7 @@ let meddela = document.getElementById('spanNumber')
 let correctAnswer = document.getElementById('spanHighLowCorrect')
 
 
+
 enter.addEventListener('click', question)
 
 
@@ -50,5 +51,8 @@ function question()  {
     
 };
 
+function clear() {
+    
+}
 
 console.log('randomtal: ' + random);
