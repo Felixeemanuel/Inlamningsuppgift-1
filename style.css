@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: radial-gradient(#000, #224fe2bc);
+}
+
+.container {
+    width: 40rem;
+    height: 30rem;
+    background-image: linear-gradient(to top right, blue, red);
+    /* background-image: linear-gradient(to top right, #272727 ,#464646, #676767); */
+    border-radius: 1rem;
+    box-shadow: 4px 4px 6px #00000080;   
+}
+h1 {
+    text-align: center;
+    color: #fff;
+    margin: 1rem;
+    margin-bottom: 3.5rem;
+    text-shadow: 4px 4px 6px #000000;
+}
+/* br {
+    display: block;
+    margin: 10px 0;
+ } */
+
+.spanHighLowCorrect {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    line-height: 1rem;
+    color: #fff;
+    display: block;
+    width: 98%;
+    padding: .5rem;
+    margin: auto;
+    margin-bottom: 3.5rem;
+    text-shadow: 4px 4px 6px #000000;
+}
+
+.insertNumber {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 2rem;
+    width: 13.5rem;
+    margin-left: 19%;
+    border-radius: 1rem;
+    border: solid 3px #5b5bfb;
+    box-shadow: 4px 4px 6px #00000080;
+}
+.insertNumber:focus {
+    outline: none;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #fff;
+    height: 2rem;
+    background-image: radial-gradient(#224fe2, #000 );
+    border-radius: 1rem;
+    border: solid 3px rgb(91, 91, 251);
+    text-shadow: 4px 4px 6px #000000;
+    box-shadow: 4px 4px 6px #00000080;
+    cursor: pointer;
+}
+.btn:hover {
+    background-image: radial-gradient(hsl(226, 77%, 61%), #000 );
+}
+.btn:active {
+    background-image: radial-gradient(hsl(226, 77%, 41%), #000 );
+}
+.enter {
+    width: 25%;
+    margin-left: 1rem;
+}
+.again {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.message {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    color: #000;
+    line-height: 2.2rem;
+    height: 2.5rem;
+    width: 30%;
+    margin: auto;
+    background: #fff;
+    border-radius: 1vh;
+    border: solid 3px #5b5bfb;
+    box-shadow: 4px 4px 6px #00000080;
+}

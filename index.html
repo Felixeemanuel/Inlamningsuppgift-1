@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Gissa numret</title>
 </head>
 <body>
-    <h1>Hej</h1>
+    <div class="container">
+        <h1>Gissa på ett nummer mellan 1 och 100</h1>
+        
+        <!-- <label for="Skriv in ditt nummer i rutan"></label> -->
+        <div class="form">
+            <span id="spanHighLowCorrect" class="spanHighLowCorrect">Skriv ett nummer och tryck enter!</span>
+            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här..."> 
+            <input type="button" id="enter" class="btn enter" onclick="submitAnswer()" value="Enter">
+        </div>
 
-    <script src="app.js"></script>
+        <input type="button" id="again" class="btn again" value="Spela om">
+        
+        <p id="message" class="message">Antal gissningar: <span id="spanNumber">?</span> </p>
+        
+    </div>
+    <script src="app3.js"></script>
 </body>
 </html>
