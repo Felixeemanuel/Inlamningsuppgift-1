@@ -44,4 +44,4 @@ const question = () => {
 };
 
 
-console.log('randomtal: ' + random);s
+console.log('randomtal: ' + random);
