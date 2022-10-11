@@ -28,6 +28,7 @@ function question()  {
     else if (input < 1 || input > 100) {
         count--
         console.log('Du angav ett felaktigt nummer, försök att skriva ett nummer mellan 1-100: (Gissningen räknades inte) ' + count);
+        correctAnswer.style.color = '#ffffff'
         correctAnswer.innerHTML = ('Felaktigt nummer! Välj ett nummer mellan 1-100')
         meddela.innerHTML = count                                                   //laddar funktionen igen eftersom svaret var fel.
     }
