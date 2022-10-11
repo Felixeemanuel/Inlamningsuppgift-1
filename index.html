@@ -13,15 +13,20 @@
         
         <!-- <label for="Skriv in ditt nummer i rutan"></label> -->
         <div class="form">
-            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här...">
+            <span id="spanHighLowCorrect" class="spanHighLowCorrect">?</span>
+            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här..."> 
             <input type="button" id="enter" class="btn enter" onclick="submitAnswer()" value="Enter">
         </div>
 
         <input type="button" id="again" class="btn again" onclick="playAgain()" value="Spela om">
         
-        <p id="message1" class="message">Du har gissat: </p>
+        <p id="message" class="message">Du har gissat: <span id="spanNumber">?</span> </p>
         
     </div>
+<<<<<<< HEAD
     <script src="app2.js"></script>
+=======
+    <script src="app3.js"></script>
+>>>>>>> jonas
 </body>
 </html>
