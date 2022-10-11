@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+function() {
+    //nånting nice
+    //hahahahha
+}
+=======
 // Generera ett random nummer mellan 1 -100
 const randomNumber = 3;
 console.log(randomNumber);
@@ -20,3 +26,4 @@ const submitAnswer = () => {
 submitAnswer();
 
 
+>>>>>>> 074d2a2a4f593bc6ea9d051e82338364e91ee07f
