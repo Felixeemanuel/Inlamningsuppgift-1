@@ -43,7 +43,7 @@ function question()  {
         //Om svaret är för högt
     else if (input > random) {
         console.log('Du gissade för högt! Antal gissningar: ' + count);
-        correctAnswer.style.color = '#0011ff'
+        correctAnswer.style.color = '#ff0000'
         correctAnswer.innerHTML = ('Du gissade för högt! Gissa igen.')
         meddela.innerHTML = count
     
