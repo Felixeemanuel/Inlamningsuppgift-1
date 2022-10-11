@@ -22,7 +22,7 @@ function question()  {
     if (input == random) {
         console.log('Rätt svar! Antal gissningar: ' + count); 
         correctAnswer.style.color = '#05ff16'
-        correctAnswer.innerHTML = ('Rätt svar är ') + random 
+        correctAnswer.innerHTML = ('Rätt svar är ' ) + random + ('!') + (' Det tog dig ' + count + ' gissningar att svara rätt!')
         meddela.innerHTML = count
     }
     else if (input < 1 || input > 100) {
