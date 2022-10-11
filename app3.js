@@ -4,8 +4,13 @@ let enter = document.getElementById('enter')
 let inputs = document.querySelectorAll('input').value;
 let meddela = document.getElementById('spanNumber')
 let correctAnswer = document.getElementById('spanHighLowCorrect')
+const restartBtn = document.getElementById("again")
+const insertNumber = document.getElementById("insertNumber")
 
-
+//Funktion för att generera ett random nummer
+function randomNumber(){
+    random = Math.floor(Math.random() * 100 + 1);
+}
 
 enter.addEventListener('click', question)
 
@@ -13,10 +18,6 @@ enter.addEventListener('click', question)
 let count = 0;              
 enter.onclick = function () {
     count++
-}
-
-//funktion
-function question()  { 
     let input = document.getElementById('insertNumber').value;
     console.log(random)
     if (input == random) {
@@ -53,11 +54,18 @@ function question()  {
         console.log('Antal gissningar: ' + count); 
         meddela.innerHTML = count
     }
-    
-};
-
-function clear() {
-    
 }
+    //Clearar alla meddelande och startar om spelet med ett nytt randomtal
+restartBtn.addEventListener("click", function(){
+    meddela.innerHTML = ""
+    count = 0
+    correctAnswer.innerHTML = "Skriv ett nummer och tryck enter!"
+    correctAnswer.style.color = '#fff'
+    document.getElementById("insertNumber").value = ""
+    randomNumber()
+    console.log(random);
+})
+
+
 
 console.log('randomtal: ' + random);
