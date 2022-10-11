@@ -18,10 +18,6 @@ enter.addEventListener('click', question)
 let count = 0;              
 enter.onclick = function () {
     count++
-}
-
-//funktion
-function question()  { 
     let input = document.getElementById('insertNumber').value;
     console.log(random)
     if (input == random) {
@@ -58,11 +54,13 @@ function question()  {
         console.log('Antal gissningar: ' + count); 
         meddela.innerHTML = count
     }
-    
-};
+}
     //Clearar alla meddelande och startar om spelet med ett nytt randomtal
 restartBtn.addEventListener("click", function(){
     meddela.innerHTML = ""
+    count = 0
+    correctAnswer.innerHTML = "Skriv ett nummer och tryck enter!"
+    correctAnswer.style.color = '#fff'
     document.getElementById("insertNumber").value = ""
     randomNumber()
     console.log(random);
