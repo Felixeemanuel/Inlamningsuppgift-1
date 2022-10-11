@@ -6,6 +6,7 @@ let meddela = document.getElementById('spanNumber')
 let correctAnswer = document.getElementById('spanHighLowCorrect')
 
 
+
 enter.addEventListener('click', question)
 
 
@@ -24,20 +25,21 @@ function question()  {
         correctAnswer.innerHTML = ('Rätt svar är ') + random 
         meddela.innerHTML = input
     }
-    else if (input < 0 || input < 100) {
-        console.log('Antal gissningar: ' + count);
-        meddela.innerHTML = input                                                   //laddar funktionen igen eftersom svaret var fel.
-    }
+
         //Om svaret är för lågt
     else if (input < random) {
         console.log('Du gissade för lågt! Antal gissningar: ' + count);  
-        meddela.style.color = '#0011ff'
+        correctAnswer.style.color = '#0011ff'
+        correctAnswer.innerHTML = "Du gissade för lågt! Gissa igen."
         meddela.innerHTML = input                                                 //laddar funktionen igen eftersom svaret var fel.   
     }
         //Om svaret är för högt
     else if (input > random) {
         console.log('Du gissade för högt! Antal gissningar: ' + count);
+        correctAnswer.style.color = '#ff0000'
+        correctAnswer.innerHTML = ('Du gissade för högt! Gissa igen.')
         meddela.innerHTML = input
+        
                                                              //laddar funktionen igen eftersom svaret var fel.   
     }
     else {
@@ -47,5 +49,8 @@ function question()  {
     
 };
 
+function clear() {
+    
+}
 
 console.log('randomtal: ' + random);
