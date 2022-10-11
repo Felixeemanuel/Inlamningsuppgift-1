@@ -10,18 +10,19 @@
 <body>
     <div class="container">
         <h1>Gissa på ett nummer mellan 1 och 100</h1>
+        
         <!-- <label for="Skriv in ditt nummer i rutan"></label> -->
         <div class="form">
-            <span id="spanHightLowCorrect" class="spanHighLowCorrect">?</span>
-            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här...">
-            <input type="button" id="enter" class="btn enter" onclick="submitAnswer()" value="Enter">
+            <span id="spanHighLowCorrect" class="spanHighLowCorrect">Skriv ett nummer och tryck enter!</span>
+            <input type="number" id="insertNumber" class="insertNumber" placeholder="Skriv ett nummer här..."> 
+            <input type="button" id="enter" class="btn enter" value="Enter">
         </div>
 
-        <input type="button" id="again" class="btn again" onclick="playAgain()" value="Spela om">
+        <input type="button" id="again" class="btn again" value="Spela om">
         
-        <p id="message" class="message">Du har gissat: <span id="spanNumber">?</span> </p>
+        <p id="message" class="message">Antal gissningar: <span id="spanNumber">?</span> </p>
         
     </div>
-    <script src="script.js"></script>
+    <script src="app3.js"></script>
 </body>
 </html>
