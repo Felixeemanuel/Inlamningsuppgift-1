@@ -22,27 +22,30 @@ function question()  {
         console.log('Rätt svar! Antal gissningar: ' + count); 
         correctAnswer.style.color = '#05ff16'
         correctAnswer.innerHTML = ('Rätt svar är ') + random 
-        meddela.innerHTML = input
+        meddela.innerHTML = count
     }
-    else if (input < 0 || input < 100) {
-        console.log('Antal gissningar: ' + count);
-        meddela.innerHTML = input                                                   //laddar funktionen igen eftersom svaret var fel.
+    else if (input < 1 || input > 100) {
+        count--
+        console.log('Du angav ett felaktigt nummer, försök att skriva ett nummer mellan 1-100: (Gissningen räknades inte) ' + count);
+        meddela.innerHTML = count                                                   //laddar funktionen igen eftersom svaret var fel.
     }
         //Om svaret är för lågt
     else if (input < random) {
         console.log('Du gissade för lågt! Antal gissningar: ' + count);  
         meddela.style.color = '#0011ff'
-        meddela.innerHTML = input                                                 //laddar funktionen igen eftersom svaret var fel.   
+        meddela.innerHTML = count                                                 //laddar funktionen igen eftersom svaret var fel.   
     }
         //Om svaret är för högt
     else if (input > random) {
         console.log('Du gissade för högt! Antal gissningar: ' + count);
-        meddela.innerHTML = input
-                                                             //laddar funktionen igen eftersom svaret var fel.   
+        meddela.innerHTML = count
+    
+    
+        //laddar funktionen igen eftersom svaret var fel.   
     }
     else {
         console.log('Antal gissningar: ' + count); 
-        meddela.innerHTML = input
+        meddela.innerHTML = count
     }
     
 };
