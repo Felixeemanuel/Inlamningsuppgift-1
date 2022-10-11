@@ -22,7 +22,7 @@ function question()  {
     if (input == random) {
         console.log('Rätt svar! Antal gissningar: ' + count); 
         correctAnswer.style.color = '#05ff16'
-        correctAnswer.innerHTML = ('Rätt svar är ' ) + random + ('!') + (' Det tog dig ' + count + ' gissningar att svara rätt!')
+        correctAnswer.innerHTML = ('Rätt svar är ' ) + random + ('!') + ('<br></br>') + (' Det tog dig ' + count + ' gissningar att svara rätt!')
         meddela.innerHTML = count
     }
     else if (input < 1 || input > 100) {
@@ -37,7 +37,6 @@ function question()  {
         console.log('Du gissade för lågt! Antal gissningar: ' + count); 
         correctAnswer.style.color = '#0011ff'
         correctAnswer.innerHTML = ('Du gissade för lågt! Gissa igen.') 
-        meddela.style.color = '#0011ff'
         meddela.innerHTML = count                                                 //laddar funktionen igen eftersom svaret var fel.   
     }
         //Om svaret är för högt

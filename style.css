@@ -27,14 +27,19 @@ h1 {
     margin-bottom: 3.5rem;
     text-shadow: 4px 4px 6px #000000;
 }
+/* br {
+    display: block;
+    margin: 10px 0;
+ } */
 
 .spanHighLowCorrect {
     text-align: center;
     font-size: 1.7rem;
     font-weight: bolder;
+    line-height: 1rem;
     color: #fff;
     display: block;
-    width: 90%;
+    width: 98%;
     padding: .5rem;
     margin: auto;
     margin-bottom: 3.5rem;
