@@ -21,21 +21,21 @@ function question()  {
         console.log('Rätt svar! Antal gissningar: ' + count); 
         meddela.innerHTML = "" + random
     }
-    else if (input < 0 || input > 100) {
+    else if (input < 0 || input < 100) {
         console.log('Antal gissningar: ' + count);                                                      //laddar funktionen igen eftersom svaret var fel.
-        }
+    }
         //Om svaret är för lågt
     else if (input < random) {
         console.log('Du gissade för lågt! Antal gissningar: ' + count);                                                      //laddar funktionen igen eftersom svaret var fel.   
-        }
+    }
         //Om svaret är för högt
-        else if (input > random) {
-            console.log('Du gissade för högt! Antal gissningar: ' + count); 
-            inn                                                     //laddar funktionen igen eftersom svaret var fel.   
-        }
-        else {
-            console.log('Antal gissningar: ' + count);  
-        }
+    else if (input > random) {
+        console.log('Du gissade för högt! Antal gissningar: ' + count); 
+                                                             //laddar funktionen igen eftersom svaret var fel.   
+    }
+    else {
+        console.log('Antal gissningar: ' + count);  
+    }
     
 };
 
