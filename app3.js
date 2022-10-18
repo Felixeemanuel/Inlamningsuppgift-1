@@ -14,7 +14,7 @@ function randomNumber(){
 enter.addEventListener('click', question);
 
 
-let count = 0;              
+let count = 1;              
 enter.onclick = function () {
     count++
 }
@@ -63,7 +63,7 @@ function question()  {
     //Clearar alla meddelande och startar om spelet med ett nytt randomtal
 restartBtn.addEventListener("click", function(){
     meddela.innerHTML = "?"
-    count = 0
+    count = 1
     correctAnswer.innerHTML = "Skriv ett nummer och tryck enter!"
     correctAnswer.style.color = '#fff'
     document.getElementById("insertNumber").value = ""
