@@ -1,6 +1,7 @@
 //random nummer
 let random = Math.floor(Math.random() * 100 + 1);
 let enter = document.getElementById('enter')
+let again = document.getElementById('again')
 let inputs = document.querySelectorAll('input').value;
 let meddela = document.getElementById('spanNumber')
 let correctAnswer = document.getElementById('spanHighLowCorrect')
@@ -57,8 +58,9 @@ function question()  {
     
 };
 
+again.addEventListener('click', clear)
 function clear() {
-    
+    console.clear()
 }
 
 console.log('randomtal: ' + random);
