@@ -7,6 +7,7 @@ let answer = document.getElementById('spanHighLowCorrect');
 const restartBtn = document.getElementById("again");
 const insertNumber = document.getElementById("insertNumber");
 
+    //Går att trycka på tangentbordets Enter knapp för att submita ett nummer
 insertNumber.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
         enter.click();
@@ -22,6 +23,7 @@ enter.onclick = function () {
     count++
     let input = document.getElementById('insertNumber').value;
     console.log(random)
+        //Om svaret är rätt
     if (input == random) {
         console.log('Rätt svar! Antal gissningar: ' + count); 
         answer.style.color = '#05ff16';
