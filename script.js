@@ -1,12 +1,17 @@
 let random = Math.floor(Math.random() * 100 + 1); // Skapar ett random tal mellan 1 - 100
 let enter = document.getElementById('enter');
-let again = document.getElementById('again')
+let again = document.getElementById('again');
 let inputs = document.querySelectorAll('input').value;
 let meddela = document.getElementById('spanNumber');
 let answer = document.getElementById('spanHighLowCorrect');
-const restartBtn = document.getElementById("again")
-const insertNumber = document.getElementById("insertNumber")
+const restartBtn = document.getElementById("again");
+const insertNumber = document.getElementById("insertNumber");
 
+insertNumber.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        enter.click();
+    }
+});
 
 function randomNumber(){
     random = Math.floor(Math.random() * 100 + 1);
@@ -19,7 +24,7 @@ enter.onclick = function () {
     console.log(random)
     if (input == random) {
         console.log('Rätt svar! Antal gissningar: ' + count); 
-        answer.style.color = '#05ff16'
+        answer.style.color = '#05ff16';
         answer.innerHTML = ('Rätt svar är ' ) + random + ('!') + ('<br></br>') + (' Det tog dig ' + count + ' gissningar att svara rätt!');
         meddela.innerHTML = count;
     }
@@ -27,21 +32,21 @@ enter.onclick = function () {
     else if (input < 1 || input > 100) {
         count--
         console.log('Du angav ett felaktigt nummer, försök att skriva ett nummer mellan 1-100: (Gissningen räknades inte) ' + count);
-        answer.style.color = '#c9c9c9'
+        answer.style.color = '#c9c9c9';
         answer.innerHTML = ('Felaktigt nummer!') + ('<br></br>') + ('Välj ett nummer mellan 1-100');
         meddela.innerHTML = count;
     }
         //Om svaret är för lågt
     else if (input < random) {
         console.log('Du gissade för lågt! Antal gissningar: ' + count); 
-        answer.style.color = '#0011ff'
+        answer.style.color = '#0011ff';
         answer.innerHTML = ('Du gissade för lågt! Gissa igen.'); 
         meddela.innerHTML = count;   
     }
         //Om svaret är för högt
     else if (input > random) {
         console.log('Du gissade för högt! Antal gissningar: ' + count);
-        answer.style.color = '#ff0000'
+        answer.style.color = '#ff0000';
         answer.innerHTML = ('Du gissade för högt! Gissa igen.');
         meddela.innerHTML = count;
     }
